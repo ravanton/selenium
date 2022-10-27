@@ -1,12 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-import math 
 import os 
 
-
-
-     
 try: 
     
     link = " http://suninjuly.github.io/file_input.html"
@@ -17,24 +13,21 @@ try:
     # Ваш код, который заполняет обязательные поля
     elements = browser.find_elements(By.CSS_SELECTOR, ".form-group input[required] ")
     for element in elements:
-        element.send_keys("Hi") 
+        element.send_keys("Yep") 
 
-    current_dir = os.path.abspath(os.path.dirname(__file__))    # получаем путь к директории текущего исполняемого файла 
-    file_path = os.path.join(current_dir, 'file.txt')           # добавляем к этому пути имя файла 
+    # получаем путь к директории текущего исполняемого файла 
+    current_dir = os.path.abspath(os.path.dirname(__file__))    
+    # имя файла, который будем загружать на сайт
+    file_name = "file.txt"
+    # добавляем к этому пути имя файла 
+    file_path = os.path.join(current_dir, "file.txt")  
+    # находим кнопку отправить файл, имеет атрибут type="file"        
+    element = browser.find_element(By.CSS_SELECTOR, "[type='file']")
+    # отправляем файл
     element.send_keys(file_path)
      
     
-   
-    
-    
-    input1 = browser.find_element(By.ID, "answer")
-    
-
-    option1 = browser.find_element(By.CSS_SELECTOR, "[for='robotCheckbox']").click()
-    
-    option2 = browser.find_element(By.ID, "robotsRule").click()
-    
-    option2 = browser.find_element(By.CSS_SELECTOR, "[type='submit']").click()
+    button = browser.find_element(By.CSS_SELECTOR, "button.btn").click()
     
 
     
