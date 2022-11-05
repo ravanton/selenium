@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 import unittest
-from selenium.common.exceptions import NoSuchElementException
+
 
 
 link1 = "http://suninjuly.github.io/registration1.html"
