@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 
 supported_browsers = {
     'chrome': webdriver.Chrome,
-    'firefox': webdriver.Firefox
+    
 }
 
 supported_languages = {
@@ -15,7 +15,7 @@ supported_languages = {
     'česky': 'cs',
     'dansk': 'da',
     'Deutsch': 'de',
-    'British English': 'en-gb',
+    'English': 'en',
     'Ελληνικά': 'el',
     'español': 'es',
     'suomi': 'fi',
